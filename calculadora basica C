@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+    int opcao, n1, n2;
+    do{
+    printf("\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n0 - Sair\n\n");
+    scanf("%d", &opcao);
+    
+    if(opcao > 0 && opcao <5){
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &n1);
+    printf("Digite o segundo valor ");
+    scanf("%d", &n2);
+    }
+    switch(opcao){
+  case 0:
+     printf("concluido\n");
+     break;
+  case 1:
+     printf("Soma: %d\n", n1 + n2);
+     break;
+  case 2:
+     printf("Subtração: %d\n", n1 - n2);
+     break;
+  case 3:
+     printf("Multiplicação: %d\n", n1 * n2);
+     break;
+  case 4:
+     while (n2 == 0){
+         printf("Não existe divisão por zero!\n\nDigite outro valor: \n");
+         scanf("%d", &n2);
+     }
+     printf("Divisão: %d\n", n1 / n2);
+     break;
+     default:
+     printf("Opção invalida.\n\nDigite outra opção: ");
+    }
+    }while(opcao != 0);
+    return 0;
+}
