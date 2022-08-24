@@ -3,6 +3,7 @@
 int main()
 {
     int opcao, n1, n2;
+    printf("ESCOLHA ABAIXO A OPÇÃO REFERENTE A OPERAÇÃO DESEJADA:\n");
     do{
     printf("\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n0 - Sair\n\n");
     scanf("%d", &opcao);
